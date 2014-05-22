@@ -3,5 +3,7 @@
 
     <string name="app_name">COP4656 - Assign2</string>
     <string name="hello_world">Hello world!</string>
+    <string name="showGator">Show me a Gator!</string>
+    <string name="showNole">Show me a Nole!</string>
 
 </resources>
