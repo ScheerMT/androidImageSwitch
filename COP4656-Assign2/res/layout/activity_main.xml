@@ -4,15 +4,7 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
 
-    <ImageSwitcher
-        android:id="@+id/imageSwitcher1"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="54dp" >
-    </ImageSwitcher>
+   
 
     <Button
         android:id="@+id/button1"
@@ -21,5 +13,27 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="71dp" />
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/nole" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/koolgator" />
+    
+    </ViewSwitcher>
 
 </RelativeLayout>

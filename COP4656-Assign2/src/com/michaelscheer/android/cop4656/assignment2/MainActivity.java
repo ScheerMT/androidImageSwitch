@@ -4,31 +4,61 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageSwitcher;
+import android.widget.ViewSwitcher;
 
 public class MainActivity extends Activity {
 
-	final ImageSwitcher imgSwitch = (ImageSwitcher)findViewById(R.id.imageSwitcher1);
+	ViewSwitcher imgSwitch;
+	Button btnChangePic;
+	
 	private int switchPic = 0;
-	private final int[] images = { R.drawable.nole, R.drawable.koolgator };
+	int[] images = { R.drawable.nole, R.drawable.koolgator };
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        // Initial Image of FSU
-        imgSwitch.setImageResource(images[switchPic]);
-       
+        init();
+        
+        
+
+        
     
     }
 
+    protected void init() {
+    	imgSwitch = (ViewSwitcher)findViewById(R.id.viewSwitcher1);
+    	btnChangePic = (Button)findViewById(R.id.button1);
 
+    	btnChangePic.setText(R.string.showNole);
+        btnChangePic.setOnClickListener(btnChangeListener);
+    }
+    
+    View.OnClickListener btnChangeListener = new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			switchImage();
+			
+		}
+	};
+    
     private void switchImage() {
-    	if (switchPic == 0)
-    		imgSwitch.setImageResource(images[++switchPic]);
-    	else
-    		imgSwitch.setImageResource(images[--switchPic]);
+    	if (switchPic == 0) {
+    		imgSwitch.showNext();
+    		switchPic = 1;
+    	}
+    	else {
+    		imgSwitch.showPrevious();
+    		switchPic = 0;
+    	}
     	
     }
+    
+    
+    
 }
