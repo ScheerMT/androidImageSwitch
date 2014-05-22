@@ -20,7 +20,9 @@
         android:layout_height="250dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" >
+        android:layout_marginTop="60dp"
+        android:inAnimation="@android:anim/fade_in"
+    	android:outAnimation="@android:anim/fade_out"  >
 
         <ImageView
             android:id="@+id/imageView1"
