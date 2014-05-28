@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">COP4656 - Assign2</string>
+    <string name="app_name">COP4656 - Assignment 2</string>
     <string name="hello_world">Hello world!</string>
     <string name="showGator">Show me a Gator!</string>
     <string name="showNole">Show me a Nole!</string>
+    <string name="fsuLogoDesc">FSU Seminole\'s Logo</string>
+    <string name="ufLogoDesc">UF Gator hater logo</string>
 
 </resources>
